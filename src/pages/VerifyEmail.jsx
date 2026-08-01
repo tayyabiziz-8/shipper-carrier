@@ -1,0 +1,37 @@
+import { useNavigate } from "react-router-dom";
+import MarkEmailReadIcon from "@mui/icons-material/MarkEmailReadOutlined";
+import { toast } from "sonner";
+
+import VerificationScreen from "../components/VerificationScreen";
+
+export default function VerifyEmail() {
+  const navigate = useNavigate();
+  // In a real app this comes from signup state / query params.
+  const email = "john@example.com";
+
+  const handleVerify = async (code) => {
+    // TODO: await api.post("/auth/verify-email", { code })
+    await new Promise((resolve, reject) =>
+      setTimeout(() => (code.length === 6 ? resolve() : reject(new Error("Invalid code"))), 600)
+    );
+    toast.success("Email verified");
+    navigate("/login");
+  };
+
+  const handleResend = async () => {
+    // TODO: await api.post("/auth/resend-email-code")
+    await new Promise((r) => setTimeout(r, 400));
+  };
+
+  return (
+    <VerificationScreen
+      icon={MarkEmailReadIcon}
+      title="Verify Your Email"
+      description="Enter the 6-digit code we sent to your email"
+      destinationLabel={email}
+      verifyLabel="Verify Code"
+      onVerify={handleVerify}
+      onResend={handleResend}
+    />
+  );
+}
