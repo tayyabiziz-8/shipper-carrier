@@ -22,7 +22,7 @@ export default function AuthSplitLayout({
           <div className="relative z-10 flex justify-center pt-8">{heroBrand}</div>
         )}
         <div className="relative z-10 flex h-full flex-col justify-end p-12 pb-16 ml-10">
-          <h1 className="max-w-sm text-3xl font-extrabold leading-tight text-white">
+          <h1 className="max-w-sm text-3xl font-semibold leading-tight text-[#D9FAE5]">
             {heroTitle}
           </h1>
           {heroSubtitle && (

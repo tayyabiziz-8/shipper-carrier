@@ -50,7 +50,7 @@ export default function ForgotPassword() {
               <TextField name="email" label="Email Address" placeholder="Enter email" type="email" />
               <button
                 type="submit" disabled={isSubmitting}
-                className="w-full rounded-lg bg-brand-600 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:opacity-60"
+                className="w-full rounded-lg bg-[#019E59] py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600 disabled:opacity-60"
               >
                 {isSubmitting ? "Sending…" : "Send Reset Link"}
               </button>
@@ -60,7 +60,7 @@ export default function ForgotPassword() {
       ) : (
         <button
           type="button" onClick={() => setSent(false)}
-          className="mt-6 w-full rounded-lg bg-brand-600 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+          className="mt-6 w-full rounded-lg bg-[#019E59] py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
         >
           Resend Link
         </button>
@@ -68,7 +68,7 @@ export default function ForgotPassword() {
 
       <p className="mt-6 text-center text-sm text-ink-500">
         Back to{" "}
-        <Link to="/login" className="font-semibold text-brand-600 hover:underline">
+        <Link to="/login" className="font-semibold text-[#019E59] underline">
           Sign In
         </Link>
       </p>

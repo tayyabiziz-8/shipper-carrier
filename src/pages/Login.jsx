@@ -38,7 +38,7 @@ export default function Login() {
       heroSubtitle="Efficient, Trusted, Professional Logistics Solutions. Log in to manage your shipments, track loads, and grow your business."
       brandTop={<BrandMark className="mb-6" />}
     >
-      <h2 className="text-2xl font-extrabold text-ink-900">Welcome Back</h2>
+      <h2 className="text-2xl font-bold text-ink-900">Welcome Back</h2>
 
       <Formik
         initialValues={{ email: "", password: "", rememberMe: false }}
@@ -63,14 +63,14 @@ export default function Login() {
                 />
                 Remember me
               </label>
-              <Link to="/forgot-password" className="text-sm font-medium text-brand-600 hover:underline">
+              <Link to="/forgot-password" className="text-sm font-medium text-[#019E59] hover:underline">
                 Forgot Password?
               </Link>
             </div>
 
             <button
               type="submit" disabled={isSubmitting}
-              className="w-full rounded-lg bg-brand-600 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:opacity-60"
+              className="w-full rounded-lg bg-[#019E59] py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600 disabled:opacity-60"
             >
               {isSubmitting ? "Signing in…" : "Continue"}
             </button>
@@ -80,13 +80,13 @@ export default function Login() {
             <div className="grid grid-cols-2 gap-3">
               <Link
                 to="/register/shipper"
-                className="rounded-lg border border-brand-600 py-2.5 text-center text-sm font-semibold text-brand-600 hover:bg-brand-50"
+                className="rounded-lg border border-brand-600 py-2.5 text-center text-sm font-semibold text-[#019E59] hover:bg-brand-50"
               >
                 Register as Shipper
               </Link>
               <Link
                 to="/register/carrier"
-                className="rounded-lg border border-brand-600 py-2.5 text-center text-sm font-semibold text-brand-600 hover:bg-brand-50"
+                className="rounded-lg border border-brand-600 py-2.5 text-center text-sm font-semibold text-[#019E59] hover:bg-brand-50"
               >
                 Register as Carrier
               </Link>

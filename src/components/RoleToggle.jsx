@@ -14,7 +14,7 @@ export default function RoleToggle({ value, onChange }) {
             type="button"
             onClick={() => onChange(opt.key)}
             className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
-              active ? "bg-brand-600 text-white shadow-sm" : "text-ink-500 hover:text-ink-700"
+              active ? "bg-[#019E59] text-white shadow-sm" : "text-ink-500 hover:text-ink-700"
             }`}
           >
             {opt.label}

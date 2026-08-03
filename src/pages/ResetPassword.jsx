@@ -61,7 +61,7 @@ export default function ResetPassword() {
 
         <Link
           to="/forgot-password"
-          className="mt-6 block w-full rounded-lg bg-brand-600 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+          className="mt-6 block w-full rounded-lg bg-[#019E59] py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-brand-600"
         >
           Request New Link
         </Link>
@@ -101,7 +101,7 @@ export default function ResetPassword() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="mt-2 w-full rounded-lg bg-brand-600 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:opacity-60"
+              className="mt-2 w-full rounded-lg bg-[#019E59] py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600 disabled:opacity-60"
             >
               {isSubmitting ? "Resetting…" : "Reset Password"}
             </button>

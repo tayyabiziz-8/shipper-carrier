@@ -61,7 +61,7 @@ export default function TwoFactorAuth() {
         type="button"
         onClick={handleVerify}
         disabled={verifying}
-        className="mt-6 w-full rounded-lg bg-brand-600 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:opacity-60"
+        className="mt-6 w-full rounded-lg bg-[#019E59] py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600 disabled:opacity-60"
       >
         {verifying ? "Verifying…" : "Verify Code"}
       </button>
@@ -69,7 +69,7 @@ export default function TwoFactorAuth() {
       <p className="mt-6 text-center text-sm text-ink-500">Lost access to your authenticator?</p>
       <Link
         to="/2fa/recovery"
-        className="mt-1 block text-center text-sm font-semibold text-brand-600 hover:underline"
+        className="mt-1 block text-center text-sm font-semibold text-[#019E59] hover:underline"
       >
         Use a recovery code
       </Link>

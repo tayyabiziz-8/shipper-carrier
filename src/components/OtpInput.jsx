@@ -57,7 +57,7 @@ export default function OtpInput({ length = 6, onComplete, error, reset }) {
           inputMode="numeric"
           maxLength={1}
           aria-label={`Digit ${i + 1} of ${length}`}
-          className={`h-14 w-12 rounded-lg border bg-gray-50 text-center text-lg font-semibold text-ink-900 focus:border-brand-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-600/20 ${
+          className={`h-14 w-12 rounded-lg border bg-gray-50 text-center text-lg font-semibold text-ink-900 focus:border-[#019E59] focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-600/20 ${
             error ? "border-red-400" : "border-gray-200"
           }`}
         />

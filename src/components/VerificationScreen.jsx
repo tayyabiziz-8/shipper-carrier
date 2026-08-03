@@ -90,7 +90,7 @@ export default function VerificationScreen({
         type="button"
         onClick={() => handleComplete(code)}
         disabled={verifying || code.length !== 6}
-        className="mt-6 w-full rounded-lg bg-brand-600 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:opacity-60"
+        className="mt-6 w-full rounded-lg bg-[#019E59] py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600 disabled:opacity-60"
       >
         {verifying ? "Verifying…" : verifyLabel}
       </button>

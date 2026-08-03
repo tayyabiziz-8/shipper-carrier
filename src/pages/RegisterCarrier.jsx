@@ -123,20 +123,20 @@ export default function RegisterCarrier() {
 
             <button
               type="submit" disabled={isSubmitting}
-              className="mt-2 w-full rounded-lg bg-brand-600 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:opacity-60"
+              className="mt-2 w-full rounded-lg bg-[#019E59] py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600 disabled:opacity-60"
             >
               {isSubmitting ? "Creating account…" : "Create Account"}
             </button>
 
             <p className="text-center text-sm text-ink-500">
               Already have an account?{" "}
-              <Link to="/login" className="font-semibold text-brand-600 underline">
+              <Link to="/login" className="font-semibold text-[#019E59] underline">
                 Sign In
               </Link>
             </p>
             <p className="text-center text-sm text-ink-500">
               Want to register as a shipper?{" "}
-              <Link to="/register/shipper" className="font-semibold text-brand-600 underline">
+              <Link to="/register/shipper" className="font-semibold text-[#019E59] underline">
                 Shipper Registration
               </Link>
             </p>

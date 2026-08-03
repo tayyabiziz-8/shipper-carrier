@@ -22,7 +22,7 @@ export default function StateField({ label, ...props }) {
         {...field}
         {...props}
         id={props.id || props.name}
-        className={`w-full rounded-lg border bg-white px-4 py-2.5 text-sm focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20 ${
+        className={`w-full rounded-lg border bg-white px-4 py-2.5 text-sm focus:border-[#019E59] focus:outline-none focus:ring-2 focus:ring-brand-600/20 ${
           field.value ? "text-ink-900" : "text-ink-400"
         } ${hasError ? "border-red-400" : "border-gray-200"}`}
       >
