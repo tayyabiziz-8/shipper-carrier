@@ -7,7 +7,8 @@ export default function AuthSplitLayout({
   brandTop,
   heroBrand,
   children,
-}) {
+}) 
+{
   return (
     <div className="flex min-h-screen w-full bg-gray-50">
       <div className="relative hidden w-[42%] min-w-[380px] overflow-hidden bg-[#0b0f19] lg:block">
@@ -17,11 +18,10 @@ export default function AuthSplitLayout({
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
         {heroBrand && (
           <div className="relative z-10 flex justify-center pt-8">{heroBrand}</div>
         )}
-        <div className="relative z-10 flex h-full flex-col justify-end p-12 pb-16">
+        <div className="relative z-10 flex h-full flex-col justify-end p-12 pb-16 ml-10">
           <h1 className="max-w-sm text-3xl font-extrabold leading-tight text-white">
             {heroTitle}
           </h1>

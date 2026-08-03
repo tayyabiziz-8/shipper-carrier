@@ -6,7 +6,8 @@ export default function BrandMark({
   showIcon = true,
   light = false,
   className = "",
-}) {
+})
+{
   return (
     <div className={`flex flex-col justify-start gap-3 ${className}`}>
       {showWordmark && (

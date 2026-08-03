@@ -38,7 +38,7 @@ export default function RegisterCarrier() {
     try {
       // TODO: await api.post("/auth/register/carrier", values)
       await new Promise((r) => setTimeout(r, 800));
-      toast.success("Account created — check your email to verify");
+      toast.success("Account created. Check your email to verify");
       navigate("/verify-email");
     } catch (err) {
       toast.error(err?.message || "Couldn't create account");
@@ -130,13 +130,13 @@ export default function RegisterCarrier() {
 
             <p className="text-center text-sm text-ink-500">
               Already have an account?{" "}
-              <Link to="/login" className="font-semibold text-brand-600 hover:underline">
+              <Link to="/login" className="font-semibold text-brand-600 underline">
                 Sign In
               </Link>
             </p>
             <p className="text-center text-sm text-ink-500">
               Want to register as a shipper?{" "}
-              <Link to="/register/shipper" className="font-semibold text-brand-600 hover:underline">
+              <Link to="/register/shipper" className="font-semibold text-brand-600 underline">
                 Shipper Registration
               </Link>
             </p>

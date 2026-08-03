@@ -1,4 +1,4 @@
-# shippermeetcarrier.com — Auth Flow
+# shippermeetcarrier.com
 
 A full React auth flow matching the shippermeetcarrier.com design: login, registration
 (shipper + carrier), forgot/reset password (incl. expired-link state), email/phone
