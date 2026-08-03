@@ -20,15 +20,13 @@ export default function PasswordField({ label, placeholder = "Enter Password", .
           {...field}
           {...props}
           id={props.id || props.name}
-          type={visible ? "text" : "password"}
-          placeholder={placeholder}
+          type={visible ? "text" : "password"} placeholder={placeholder}
           className={`w-full rounded-lg border bg-white px-4 py-2.5 pr-11 text-sm text-ink-900 placeholder:text-ink-400 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20 ${
             hasError ? "border-red-400" : "border-gray-200"
           }`}
         />
         <button
-          type="button"
-          onClick={() => setVisible((v) => !v)}
+          type="button" onClick={() => setVisible((v) => !v)}
           aria-label={visible ? "Hide password" : "Show password"}
           className="absolute right-3 top-1/2 -translate-y-1/2 text-ink-400 hover:text-ink-700"
         >

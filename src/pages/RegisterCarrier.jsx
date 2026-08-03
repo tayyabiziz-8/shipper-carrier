@@ -114,8 +114,7 @@ export default function RegisterCarrier() {
 
             <label className="flex items-start gap-2 text-sm text-ink-700">
               <Checkbox
-                size="small"
-                checked={values.marketingOptIn}
+                size="small" checked={values.marketingOptIn}
                 onChange={(e) => setFieldValue("marketingOptIn", e.target.checked)}
                 sx={{ p: 0, mt: "-2px" }}
               />
@@ -123,8 +122,7 @@ export default function RegisterCarrier() {
             </label>
 
             <button
-              type="submit"
-              disabled={isSubmitting}
+              type="submit" disabled={isSubmitting}
               className="mt-2 w-full rounded-lg bg-brand-600 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:opacity-60"
             >
               {isSubmitting ? "Creating account…" : "Create Account"}
@@ -135,7 +133,6 @@ export default function RegisterCarrier() {
               <Link to="/login" className="font-semibold text-brand-600 hover:underline">
                 Sign In
               </Link>
-              {" · "}
             </p>
             <p className="text-center text-sm text-ink-500">
               Want to register as a shipper?{" "}

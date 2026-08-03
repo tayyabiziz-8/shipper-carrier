@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphoneRounded";
 import { toast } from "sonner";
-
 import VerificationScreen from "../components/VerificationScreen";
 
 export default function VerifyPhone() {

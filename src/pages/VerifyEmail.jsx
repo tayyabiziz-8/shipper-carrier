@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import MarkEmailReadIcon from "@mui/icons-material/MarkEmailReadOutlined";
 import { toast } from "sonner";
-
 import VerificationScreen from "../components/VerificationScreen";
 
 export default function VerifyEmail() {

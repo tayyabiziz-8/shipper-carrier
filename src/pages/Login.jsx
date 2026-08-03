@@ -42,8 +42,7 @@ export default function Login() {
 
       <Formik
         initialValues={{ email: "", password: "", rememberMe: false }}
-        validationSchema={schema}
-        onSubmit={handleSubmit}
+        validationSchema={schema} onSubmit={handleSubmit}
       >
         {({ isSubmitting, values, setFieldValue }) => (
           <Form className="mt-6 flex flex-col gap-5">
@@ -58,8 +57,7 @@ export default function Login() {
             <div className="flex items-center justify-between">
               <label className="flex items-center gap-2 text-sm text-ink-700">
                 <Checkbox
-                  size="small"
-                  checked={values.rememberMe}
+                  size="small" checked={values.rememberMe}
                   onChange={(e) => setFieldValue("rememberMe", e.target.checked)}
                   sx={{ p: 0 }}
                 />
@@ -71,8 +69,7 @@ export default function Login() {
             </div>
 
             <button
-              type="submit"
-              disabled={isSubmitting}
+              type="submit" disabled={isSubmitting}
               className="w-full rounded-lg bg-brand-600 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:opacity-60"
             >
               {isSubmitting ? "Signing in…" : "Continue"}

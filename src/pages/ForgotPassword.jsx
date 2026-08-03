@@ -49,8 +49,7 @@ export default function ForgotPassword() {
             <Form className="mt-6 flex flex-col gap-5">
               <TextField name="email" label="Email Address" placeholder="Enter email" type="email" />
               <button
-                type="submit"
-                disabled={isSubmitting}
+                type="submit" disabled={isSubmitting}
                 className="w-full rounded-lg bg-brand-600 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700 disabled:opacity-60"
               >
                 {isSubmitting ? "Sending…" : "Send Reset Link"}
@@ -60,8 +59,7 @@ export default function ForgotPassword() {
         </Formik>
       ) : (
         <button
-          type="button"
-          onClick={() => setSent(false)}
+          type="button" onClick={() => setSent(false)}
           className="mt-6 w-full rounded-lg bg-brand-600 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
         >
           Resend Link
