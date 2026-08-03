@@ -57,7 +57,6 @@ export default function RegisterCarrier() {
         "Fast and guaranteed payments",
         "Fleet management tools",
       ]}
-      heroBrand={<BrandMark light size={64} />}
     >
       <h2 className="text-2xl font-extrabold text-ink-900">Create Carrier Account</h2>
       <p className="mt-1 text-sm text-ink-500">Fill in your business details to get started</p>
@@ -137,6 +136,8 @@ export default function RegisterCarrier() {
                 Sign In
               </Link>
               {" · "}
+            </p>
+            <p className="text-center text-sm text-ink-500">
               Want to register as a shipper?{" "}
               <Link to="/register/shipper" className="font-semibold text-brand-600 hover:underline">
                 Shipper Registration

@@ -1,9 +1,5 @@
 import TruckIllustration from "../components/TruckIllustration";
 
-/**
- * Left: dark hero panel with truck illustration, headline, and bullet list.
- * Right: form content (passed as children), with the wordmark + badge on top.
- */
 export default function AuthSplitLayout({
   heroTitle,
   heroSubtitle,
@@ -19,7 +15,7 @@ export default function AuthSplitLayout({
         {heroBrand && (
           <div className="relative z-10 flex justify-center pt-8">{heroBrand}</div>
         )}
-        <div className="relative z-10 flex h-full flex-col justify-end p-12 pb-16">
+        <div className="relative z-10 flex h-full flex-col justify-start p-12 pb-16">
           <h1 className="max-w-sm text-3xl font-extrabold leading-tight text-white">
             {heroTitle}
           </h1>

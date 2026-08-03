@@ -17,10 +17,7 @@ export default function TruckIllustration() {
         </linearGradient>
       </defs>
       <rect width="600" height="260" fill="url(#sky)" />
-      {/* motion lines */}
-      {[40, 70, 100].map((y, i) => (
-        <rect key={y} x="0" y={y} width={220 + i * 60} height="3" fill="url(#speedline)" />
-      ))}
+
       {/* road */}
       <rect x="0" y="220" width="600" height="40" fill="#1f2937" />
       <rect x="0" y="236" width="600" height="4" fill="#4b5563" opacity="0.6" />
