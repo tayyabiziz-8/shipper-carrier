@@ -7,8 +7,7 @@ export default function AuthSplitLayout({
   brandTop,
   heroBrand,
   children,
-}) 
-{
+}) {
   return (
     <div className="flex min-h-screen w-full bg-gray-50">
       <div className="relative hidden w-[42%] min-w-[380px] overflow-hidden bg-[#0b0f19] lg:block">
@@ -18,15 +17,18 @@ export default function AuthSplitLayout({
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
         {heroBrand && (
-          <div className="relative z-10 flex justify-center pt-8">{heroBrand}</div>
+          <div className="absolute right-8 top-6 z-10 flex flex-col items-center">
+            {heroBrand}
+          </div>
         )}
-        <div className="relative z-10 flex h-full flex-col justify-end p-12 pb-16 ml-10">
-          <h1 className="max-w-sm text-3xl font-semibold leading-tight text-[#D9FAE5]">
+        <div className="relative z-10 flex h-full flex-col justify-end p-12 pb-16">
+          <h1 className="max-w-sm text-4xl font-semibold leading-tight text-[#D9FAE5]">
             {heroTitle}
           </h1>
           {heroSubtitle && (
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-gray-300">
+            <p className="mt-4 max-w-sm text-base leading-relaxed text-white font-normal opacity-70">
               {heroSubtitle}
             </p>
           )}
@@ -34,7 +36,7 @@ export default function AuthSplitLayout({
             <ul className="mt-6 flex flex-col gap-2.5">
               {bullets.map((b) => (
                 <li key={b} className="flex items-center gap-2.5 text-sm text-gray-100">
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-600">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#019E59]">
                     <svg viewBox="0 0 12 12" className="h-3 w-3 fill-none stroke-white stroke-2">
                       <path d="M2 6l2.5 2.5L10 3" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import VpnKeyIcon from "@mui/icons-material/VpnKeyRounded";
 import { toast } from "sonner";
 import { useState } from "react";
 
@@ -9,6 +8,7 @@ import AuthCardLayout from "../layouts/AuthCardLayout";
 import BrandMark from "../components/BrandMark";
 import IconBadge from "../components/IconBadge";
 import TextField from "../components/TextField";
+import keyIcon from "../assets/key.png";
 
 const schema = Yup.object({
   email: Yup.string().email("Enter a valid email address").required("Email is required"),
@@ -34,7 +34,7 @@ export default function ForgotPassword() {
     <AuthCardLayout>
       <div className="flex flex-col items-center text-center">
         <BrandMark showIcon={false} className="mb-2" />
-        <IconBadge icon={VpnKeyIcon} />
+        <IconBadge src={keyIcon} />
         <h2 className="mt-5 text-2xl font-extrabold text-ink-900">Forgot Password?</h2>
         <p className="mt-2 text-sm text-ink-500">
           {sent
@@ -49,7 +49,8 @@ export default function ForgotPassword() {
             <Form className="mt-6 flex flex-col gap-5">
               <TextField name="email" label="Email Address" placeholder="Enter email" type="email" />
               <button
-                type="submit" disabled={isSubmitting}
+                type="submit"
+                disabled={isSubmitting}
                 className="w-full rounded-lg bg-[#019E59] py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600 disabled:opacity-60"
               >
                 {isSubmitting ? "Sending…" : "Send Reset Link"}
@@ -59,7 +60,8 @@ export default function ForgotPassword() {
         </Formik>
       ) : (
         <button
-          type="button" onClick={() => setSent(false)}
+          type="button"
+          onClick={() => setSent(false)}
           className="mt-6 w-full rounded-lg bg-[#019E59] py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
         >
           Resend Link

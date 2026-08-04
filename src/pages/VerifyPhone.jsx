@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import PhoneIphoneIcon from "@mui/icons-material/PhoneIphoneRounded";
 import { toast } from "sonner";
+
 import VerificationScreen from "../components/VerificationScreen";
+import phoneIcon from "../assets/phone.png";
 
 export default function VerifyPhone() {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ export default function VerifyPhone() {
 
   return (
     <VerificationScreen
-      icon={PhoneIphoneIcon}
+      iconSrc={phoneIcon}
       title="Verify Your Phone"
       description="Enter the 6-digit code we sent to your phone"
       destinationLabel={phone}

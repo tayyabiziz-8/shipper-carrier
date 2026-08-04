@@ -9,6 +9,7 @@ import TwoFactorAuth from "./pages/TwoFactorAuth";
 import VerifyEmail from "./pages/VerifyEmail";
 import VerifyPhone from "./pages/VerifyPhone";
 import Dashboard from "./pages/Dashboard";
+import CarrierDashboard from "./pages/dashboard/CarrierDashboard";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
       <Route path="/verify-email" element={<VerifyEmail />} />
       <Route path="/verify-phone" element={<VerifyPhone />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/carrier/dashboard" element={<CarrierDashboard />} />
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );

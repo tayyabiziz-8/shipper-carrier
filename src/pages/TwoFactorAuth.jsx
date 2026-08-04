@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { toast } from "sonner";
 
 import AuthCardLayout from "../layouts/AuthCardLayout";
 import BrandMark from "../components/BrandMark";
 import IconBadge from "../components/IconBadge";
 import OtpInput from "../components/OtpInput";
+import lockIcon from "../assets/lock.png";
 
 export default function TwoFactorAuth() {
   const [code, setCode] = useState("");
@@ -38,7 +38,7 @@ export default function TwoFactorAuth() {
     <AuthCardLayout>
       <div className="flex flex-col items-center text-center">
         <BrandMark showIcon={false} className="mb-2" />
-        <IconBadge icon={LockOutlinedIcon} />
+        <IconBadge src={lockIcon} />
         <h2 className="mt-5 text-2xl font-extrabold text-ink-900">Two-Factor Authentication</h2>
         <p className="mt-2 text-sm text-ink-500">Verify your identity to complete sign in</p>
       </div>

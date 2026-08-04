@@ -10,7 +10,7 @@ import OtpInput from "./OtpInput";
 const RESEND_COOLDOWN = 30;
 
 export default function VerificationScreen({
-  icon,
+  iconSrc,
   title,
   description,
   destinationLabel,
@@ -65,7 +65,7 @@ export default function VerificationScreen({
     <AuthCardLayout>
       <div className="flex flex-col items-center text-center">
         <BrandMark showIcon={false} className="mb-2" />
-        <IconBadge icon={icon} />
+        <IconBadge src={iconSrc} />
         <h2 className="mt-5 text-2xl font-extrabold text-ink-900">{title}</h2>
         <p className="mt-2 text-sm text-ink-500">{description}</p>
         {destinationLabel && (
@@ -100,7 +100,7 @@ export default function VerificationScreen({
         type="button"
         onClick={handleResend}
         disabled={cooldown > 0}
-        className="mt-1 block w-full text-center text-sm font-semibold text-brand-600 underline hover:opacity-80 disabled:cursor-not-allowed disabled:text-ink-400 disabled:no-underline"
+        className="mt-1 block w-full text-center text-sm font-semibold text-[#019E59] underline hover:opacity-80 disabled:cursor-not-allowed disabled:text-ink-400 disabled:no-underline"
       >
         {cooldown > 0 ? `Resend Code (${cooldown}s)` : "Resend Code"}
       </button>

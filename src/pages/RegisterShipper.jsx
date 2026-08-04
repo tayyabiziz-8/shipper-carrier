@@ -37,7 +37,7 @@ export default function RegisterShipper() {
     try {
       // TODO: await api.post("/auth/register/shipper", values)
       await new Promise((r) => setTimeout(r, 800));
-      toast.success("Account created. Check your email to verify");
+      toast.success("Account created — check your email to verify");
       navigate("/verify-email");
     } catch (err) {
       toast.error(err?.message || "Couldn't create account");
@@ -56,6 +56,7 @@ export default function RegisterShipper() {
         "Real-time shipment tracking",
         "Secure escrow payments",
       ]}
+      heroBrand={<BrandMark light size={120} />}
     >
       <h2 className="text-2xl font-extrabold text-ink-900">Create Shipper Account</h2>
       <p className="mt-1 text-sm text-ink-500">Fill in your business details to get started</p>
@@ -109,7 +110,8 @@ export default function RegisterShipper() {
 
             <label className="flex items-start gap-2 text-sm text-ink-700">
               <Checkbox
-                size="small" checked={values.agreeToTerms}
+                size="small"
+                checked={values.agreeToTerms}
                 onChange={(e) => setFieldValue("agreeToTerms", e.target.checked)}
                 sx={{ p: 0, mt: "-2px" }}
               />
@@ -117,7 +119,8 @@ export default function RegisterShipper() {
             </label>
 
             <button
-              type="submit" disabled={isSubmitting}
+              type="submit"
+              disabled={isSubmitting}
               className="mt-2 w-full rounded-lg bg-[#019E59] py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600 disabled:opacity-60"
             >
               {isSubmitting ? "Creating account…" : "Create Account"}

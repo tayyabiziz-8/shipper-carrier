@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import VpnKeyIcon from "@mui/icons-material/VpnKeyRounded";
 import WarningAmberIcon from "@mui/icons-material/WarningAmberRounded";
 import { toast } from "sonner";
 
@@ -11,6 +10,7 @@ import BrandMark from "../components/BrandMark";
 import IconBadge from "../components/IconBadge";
 import PasswordField from "../components/PasswordField";
 import PasswordStrengthBar from "../components/PasswordStrengthBar";
+import keyIcon from "../assets/key.png";
 
 const schema = Yup.object({
   password: Yup.string().min(8, "Password must be at least 8 characters").required("Required"),
@@ -44,7 +44,7 @@ export default function ResetPassword() {
       <AuthCardLayout>
         <div className="flex flex-col items-center text-center">
           <BrandMark showIcon={false} className="mb-2" />
-          <IconBadge icon={VpnKeyIcon} />
+          <IconBadge src={keyIcon} />
           <h2 className="mt-5 text-2xl font-extrabold text-ink-900">Reset Your Password</h2>
           <p className="mt-2 text-sm text-ink-500">Enter your new password below</p>
         </div>
@@ -80,7 +80,7 @@ export default function ResetPassword() {
     <AuthCardLayout>
       <div className="flex flex-col items-center text-center">
         <BrandMark showIcon={false} className="mb-2" />
-        <IconBadge icon={VpnKeyIcon} />
+        <IconBadge src={keyIcon} />
         <h2 className="mt-5 text-2xl font-extrabold text-ink-900">Reset Your Password</h2>
         <p className="mt-2 text-sm text-ink-500">Enter your new password below</p>
       </div>
