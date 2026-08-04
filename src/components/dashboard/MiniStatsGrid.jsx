@@ -80,7 +80,7 @@ export default function MiniStatsGrid({ data }) {
       <MiniStatCard
         icon={AutoAwesomeRoundedIcon}
         iconBg="bg-brand-50"
-        iconColor="text-brand-600"
+        iconColor="text-[#019E59]"
         value={data.aiShipmentMatch.value}
         title="AI Shipment Match"
         badge={data.aiShipmentMatch.badge}

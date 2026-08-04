@@ -13,7 +13,6 @@ Update: Added the carrier dashboard, one page for now.
 - Material UI
 - React Router v6
 - Formik + Yup
-- TanStack Query (wired up and ready for real API calls)
 - Sonner (toasts)
 
 ## Setup
@@ -38,7 +37,7 @@ Visit `http://localhost:5173/login`.
 | `/verify-email`        | Email verification code                  |
 | `/verify-phone`        | Phone verification code                  |
 | `/dashboard`           | Placeholder landing page after auth      |
-| `/dashboard/carrier`   | Carrier Dashboard                        |
+| `/carrier/dashboard`   | Carrier Dashboard                        |
 
 ## Wiring up your API
 
@@ -47,6 +46,8 @@ Every submit handler has a `// TODO` marking where to swap the simulated
 mutation). Error states already flow into `sonner` toasts and inline Formik
 field errors, so you mostly just need to plug in the request.
 
-## Notes
+### Notes
+
+working on carrier-flow pages
 
 ---

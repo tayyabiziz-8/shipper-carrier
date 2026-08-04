@@ -1,14 +1,12 @@
-import SearchOffRoundedIcon from "@mui/icons-material/SearchOffRounded";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
+import emptyStateImg from "../../assets/emptystate.png";
 
 export default function EmptyActivityCard({ onBrowse }) {
   return (
     <div className="flex flex-col items-center justify-center rounded-2xl border border-gray-100 bg-white px-6 py-20 text-center shadow-card">
-      <div className="mb-6 flex h-28 w-28 items-center justify-center rounded-full bg-gray-50">
-        <SearchOffRoundedIcon sx={{ fontSize: 52 }} className="text-gray-300" />
-      </div>
-      <h3 className="text-xl font-bold text-[#121721] opacity-50">No activity yet.</h3>
-      <p className="mt-1 text-base text-[#121721] opacity-50">Browse the marketplace to find your first load.</p>
+      <img src={emptyStateImg} alt="" className="mb-6 h-auto w-full max-w-[220px]" />
+      <h3 className="text-lg font-bold text-ink-900">No activity yet.</h3>
+      <p className="mt-1 text-sm text-ink-500">Browse the marketplace to find your first load.</p>
       <button
         type="button"
         onClick={onBrowse}

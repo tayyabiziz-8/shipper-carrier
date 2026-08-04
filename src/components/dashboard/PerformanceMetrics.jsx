@@ -8,7 +8,7 @@ export default function PerformanceMetrics({ data }) {
       <div className="mt-6 flex items-center justify-center gap-10 border-b border-gray-100 pb-6">
         <RadialGauge value={data.reliabilityScore} color="#3b82f6" label="Reliability Score" />
         <div className="h-20 w-px bg-gray-100" />
-        <RadialGauge value={data.onTimeDelivery} color="#0f7d43" label="On-Time Delivery" />
+        <RadialGauge value={data.onTimeDelivery} color="#019E59" label="On-Time Delivery" />
       </div>
 
       <div className="mt-6 flex items-center justify-between gap-6">

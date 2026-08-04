@@ -45,7 +45,7 @@ export default function Topbar({ user }) {
         </button>
 
         <button type="button" aria-label="Notifications" className="relative text-ink-500 hover:text-ink-900">
-          <NotificationsNoneRoundedIcon fontSize="small" />
+          <NotificationsNoneRoundedIcon fontSize="medium" />
           <span className="absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] font-semibold text-white">
             1
           </span>
