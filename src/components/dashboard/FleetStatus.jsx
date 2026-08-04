@@ -16,7 +16,7 @@ export default function FleetStatus({ data, onManageFleet }) {
         <button
           type="button"
           onClick={onManageFleet}
-          className="rounded-2xl border border-gray-200 px-4 py-2 text-sm font-semibold text-ink-900 hover:bg-gray-50"
+          className="rounded-3xl border border-gray-200 px-4 py-2 text-sm font-semibold text-ink-900 hover:bg-gray-50"
         >
           Manage Fleet
         </button>

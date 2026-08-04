@@ -19,14 +19,14 @@ export default function PerformanceMetrics({ data }) {
               style={{ width: `${data.acceptanceRate}%` }}
             />
           </div>
-          <p className="mt-2 text-lg font-extrabold text-ink-900">
+          <p className="mt-2 text-2xl font-extrabold text-ink-900">
             {data.acceptanceRate}%{" "}
-            <span className="text-sm font-medium text-ink-500">Acceptance Rate</span>
+            <span className="text-base font-medium text-[#121721] opacity-70">Acceptance Rate</span>
           </p>
         </div>
         <div className="text-right">
-          <p className="text-sm text-ink-500">Avg Response</p>
-          <p className="text-lg font-extrabold text-ink-900">{data.avgResponseHours} hrs</p>
+          <p className="text-base text-[#121721] opacity-70">Avg Response</p>
+          <p className="text-2xl font-extrabold text-ink-900">{data.avgResponseHours} hrs</p>
         </div>
       </div>
     </div>

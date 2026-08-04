@@ -15,7 +15,7 @@ export default function Topbar({ user }) {
           <MenuRoundedIcon />
         </button>
         <div className="flex w-72 items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2">
-          <SearchRoundedIcon fontSize="small" className="text-ink-400" />
+          <SearchRoundedIcon fontSize="small" className="text-[#121721]" />
           <input
             type="text"
             placeholder="Search"
@@ -28,7 +28,7 @@ export default function Topbar({ user }) {
         <div className="flex items-center gap-2 rounded-lg border border-gray-200 px-3 py-2">
           <AccountBalanceWalletRoundedIcon fontSize="small" className="text-[#3C82F5]" />
           <span className="text-sm text-ink-500">Credit Balance:</span>
-          <span className="text-sm font-bold text-ink-900">
+          <span className="text-base font-extrabold text-ink-900">
             ${user.creditBalance.toLocaleString()}
           </span>
         </div>
