@@ -22,9 +22,11 @@ export default function Login() {
 
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
+      // TODO: wire up to your auth API, e.g.
+      // await api.post("/auth/login", { ...values, role });
       await new Promise((r) => setTimeout(r, 600));
       toast.success("Signed in successfully");
-      navigate("/2fa");
+      navigate("/2fa", { state: { role } });
     } catch (err) {
       toast.error(err?.message || "Invalid email or password");
     } finally {
@@ -38,11 +40,12 @@ export default function Login() {
       heroSubtitle="Efficient, Trusted, Professional Logistics Solutions. Log in to manage your shipments, track loads, and grow your business."
       brandTop={<BrandMark className="mb-6" />}
     >
-      <h2 className="text-2xl font-bold text-ink-900">Welcome Back</h2>
+      <h2 className="text-2xl font-extrabold text-ink-900">Welcome Back</h2>
 
       <Formik
         initialValues={{ email: "", password: "", rememberMe: false }}
-        validationSchema={schema} onSubmit={handleSubmit}
+        validationSchema={schema}
+        onSubmit={handleSubmit}
       >
         {({ isSubmitting, values, setFieldValue }) => (
           <Form className="mt-6 flex flex-col gap-5">
@@ -57,7 +60,8 @@ export default function Login() {
             <div className="flex items-center justify-between">
               <label className="flex items-center gap-2 text-sm text-ink-700">
                 <Checkbox
-                  size="small" checked={values.rememberMe}
+                  size="small"
+                  checked={values.rememberMe}
                   onChange={(e) => setFieldValue("rememberMe", e.target.checked)}
                   sx={{ p: 0 }}
                 />
@@ -69,7 +73,8 @@ export default function Login() {
             </div>
 
             <button
-              type="submit" disabled={isSubmitting}
+              type="submit"
+              disabled={isSubmitting}
               className="w-full rounded-lg bg-[#019E59] py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600 disabled:opacity-60"
             >
               {isSubmitting ? "Signing in…" : "Continue"}
@@ -80,13 +85,13 @@ export default function Login() {
             <div className="grid grid-cols-2 gap-3">
               <Link
                 to="/register/shipper"
-                className="rounded-lg border border-brand-600 py-2.5 text-center text-sm font-semibold text-[#019E59] hover:bg-brand-50"
+                className="rounded-lg border border-[#019E59] py-2.5 text-center text-sm font-semibold text-[#019E59] hover:bg-brand-50"
               >
                 Register as Shipper
               </Link>
               <Link
                 to="/register/carrier"
-                className="rounded-lg border border-brand-600 py-2.5 text-center text-sm font-semibold text-[#019E59] hover:bg-brand-50"
+                className="rounded-lg border border-[#019E59] py-2.5 text-center text-sm font-semibold text-[#019E59] hover:bg-brand-50"
               >
                 Register as Carrier
               </Link>

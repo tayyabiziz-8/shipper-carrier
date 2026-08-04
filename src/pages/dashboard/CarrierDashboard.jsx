@@ -1,5 +1,10 @@
 import { useState } from "react";
 
+import LocalShippingRoundedIcon from "@mui/icons-material/LocalShippingRounded";
+import Inventory2RoundedIcon from "@mui/icons-material/Inventory2Rounded";
+import AssignmentRoundedIcon from "@mui/icons-material/AssignmentRounded";
+import PaidRoundedIcon from "@mui/icons-material/PaidRounded";
+
 import DashboardLayout from "../../layouts/DashboardLayout";
 import StatCard from "../../components/dashboard/StatCard";
 import VerificationBanner from "../../components/dashboard/VerificationBanner";
@@ -41,11 +46,11 @@ export default function CarrierDashboard() {
       </div>
 
       <div className="mb-6 flex items-start justify-between gap-4">
-        <h1 className="text-2xl font-extrabold text-ink-900">Dashboard</h1>
+        <h1 className="text-2xl font-bold text-ink-900">Dashboard</h1>
         {hasActivity ? (
           <button
             type="button"
-            className="rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+            className="rounded-lg bg-[#019E59] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
           >
             Browse Loads
           </button>
@@ -61,21 +66,21 @@ export default function CarrierDashboard() {
           label="Active Shipments"
           value={String(data.stats.activeShipments.value).padStart(2, "0")}
           delta={data.stats.activeShipments.delta}
-          icon="STAT ICON: truck"
+          icon={LocalShippingRoundedIcon}
           muted={!hasActivity}
         />
         <StatCard
           label="Available Loads"
           value={String(data.stats.availableLoads.value).padStart(2, "0")}
           delta={data.stats.availableLoads.delta}
-          icon="STAT ICON: document/package"
+          icon={Inventory2RoundedIcon}
           muted={!hasActivity}
         />
         <StatCard
           label="Pending Offers"
           value={String(data.stats.pendingOffers.value).padStart(2, "0")}
           delta={data.stats.pendingOffers.delta}
-          icon="STAT ICON: clipboard/offer"
+          icon={AssignmentRoundedIcon}
           muted={!hasActivity}
         />
         <StatCard
@@ -86,7 +91,7 @@ export default function CarrierDashboard() {
               : String(data.stats.totalEarnings.value).padStart(2, "0")
           }
           delta={data.stats.totalEarnings.delta}
-          icon="STAT ICON: dollar sign"
+          icon={PaidRoundedIcon}
           muted={!hasActivity}
         />
       </div>

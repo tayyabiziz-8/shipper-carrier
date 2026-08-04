@@ -18,7 +18,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid #019E59;
+  outline: 2px solid #0f7d43;
   outline-offset: 2px;
 }
 
@@ -30,4 +30,14 @@ input:focus-visible,
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Keep sidebar scrollable (in case content ever overflows the viewport)
+   without showing a visible scrollbar. */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

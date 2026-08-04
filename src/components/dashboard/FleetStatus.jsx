@@ -16,7 +16,7 @@ export default function FleetStatus({ data, onManageFleet }) {
         <button
           type="button"
           onClick={onManageFleet}
-          className="rounded-lg border border-gray-200 px-4 py-2 text-sm font-semibold text-ink-900 hover:bg-gray-50"
+          className="rounded-2xl border border-gray-200 px-4 py-2 text-sm font-semibold text-ink-900 hover:bg-gray-50"
         >
           Manage Fleet
         </button>
@@ -27,8 +27,8 @@ export default function FleetStatus({ data, onManageFleet }) {
           const stats = data[fleet.key];
           return (
             <div key={fleet.key} className="rounded-xl border border-gray-100 bg-gray-50 px-4 pb-3">
-              <img src={fleet.img} alt={fleet.label} className="ml-9 h-22 w-22 object-contain" />
-              <p className="mt-3 text-sm font-bold text-ink-900">{fleet.label}</p>
+              <img src={fleet.img} alt={fleet.label} className="ml-[38px] h-22 w-22 object-contain" />
+              <p className="text-sm font-bold text-ink-900">{fleet.label}</p>
               <p className="text-xs text-ink-500">{stats.total} Total</p>
 
               <div className="mt-3 flex flex-col gap-1.5 border-t border-gray-200 pt-3 text-xs">

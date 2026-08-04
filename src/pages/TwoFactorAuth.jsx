@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { toast } from "sonner";
 
 import AuthCardLayout from "../layouts/AuthCardLayout";
@@ -13,6 +13,8 @@ export default function TwoFactorAuth() {
   const [error, setError] = useState(false);
   const [verifying, setVerifying] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const role = location.state?.role || "carrier";
 
   const handleVerify = async () => {
     if (code.length !== 6) {
@@ -25,7 +27,7 @@ export default function TwoFactorAuth() {
       // TODO: await api.post("/auth/2fa/verify", { code })
       await new Promise((r) => setTimeout(r, 600));
       toast.success("Identity verified");
-      navigate("/dashboard");
+      navigate(role === "carrier" ? "/carrier/dashboard" : "/dashboard");
     } catch (err) {
       setError(true);
       toast.error(err?.message || "Invalid code, please try again");

@@ -1,6 +1,14 @@
-import IconPlaceholder from "./IconPlaceholder";
+import CancelRoundedIcon from "@mui/icons-material/CancelRounded";
+import DoneAllRoundedIcon from "@mui/icons-material/DoneAllRounded";
+import TodayRoundedIcon from "@mui/icons-material/TodayRounded";
+import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
+import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
+import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
+import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
 
-function MiniStatCard({ iconLabel, iconBg, value, title, delta, direction, highlight, badge }) {
+function MiniStatCard({ icon: Icon, iconBg, iconColor, value, title, delta, direction, highlight, badge }) {
+  const TrendIcon = direction === "up" ? TrendingUpRoundedIcon : TrendingDownRoundedIcon;
+
   return (
     <div
       className={`rounded-2xl border bg-white p-4 shadow-card ${
@@ -8,7 +16,9 @@ function MiniStatCard({ iconLabel, iconBg, value, title, delta, direction, highl
       }`}
     >
       <div className="flex items-center justify-between">
-        <IconPlaceholder label={iconLabel} size={36} rounded="rounded-xl" className={iconBg} />
+        <span className={`flex h-9 w-9 items-center justify-center rounded-xl ${iconBg} ${iconColor}`}>
+          <Icon fontSize="small" />
+        </span>
         {badge ? (
           <span className="rounded-full bg-brand-50 px-2 py-0.5 text-[10px] font-semibold text-brand-700">
             {badge}
@@ -20,7 +30,7 @@ function MiniStatCard({ iconLabel, iconBg, value, title, delta, direction, highl
                 direction === "up" ? "text-emerald-600" : "text-red-500"
               }`}
             >
-              <IconPlaceholder label={`ICON: trend arrow ${direction}`} size={10} />
+              <TrendIcon sx={{ fontSize: 12 }} />
               {delta}
             </span>
           )
@@ -31,7 +41,7 @@ function MiniStatCard({ iconLabel, iconBg, value, title, delta, direction, highl
       </p>
       <div className="mt-1 flex items-center justify-between">
         <p className="text-xs uppercase tracking-wide text-ink-500">{title}</p>
-        <IconPlaceholder label="ICON: open/external link" size={12} />
+        <ArrowOutwardRoundedIcon sx={{ fontSize: 12 }} className="text-ink-300" />
       </div>
     </div>
   );
@@ -41,32 +51,36 @@ export default function MiniStatsGrid({ data }) {
   return (
     <div className="grid grid-cols-2 gap-4">
       <MiniStatCard
-        iconLabel="ICON: canceled/x-circle"
-        iconBg="border-red-200 bg-red-50"
+        icon={CancelRoundedIcon}
+        iconBg="bg-red-50"
+        iconColor="text-red-500"
         value={data.canceledShipments.value}
         title="Canceled Shipments"
         delta={data.canceledShipments.delta}
         direction={data.canceledShipments.direction}
       />
       <MiniStatCard
-        iconLabel="ICON: delivered/double-check"
-        iconBg="border-blue-200 bg-blue-50"
+        icon={DoneAllRoundedIcon}
+        iconBg="bg-blue-50"
+        iconColor="text-blue-500"
         value={data.deliveredShipments.value}
         title="Delivered Shipments"
         delta={data.deliveredShipments.delta}
         direction={data.deliveredShipments.direction}
       />
       <MiniStatCard
-        iconLabel="ICON: calendar/today"
-        iconBg="border-gray-200 bg-gray-100"
+        icon={TodayRoundedIcon}
+        iconBg="bg-gray-100"
+        iconColor="text-gray-500"
         value={data.todayShipments.value}
         title="Today Shipments"
         delta={data.todayShipments.delta}
         direction={data.todayShipments.direction}
       />
       <MiniStatCard
-        iconLabel="ICON: AI sparkle/suggestion"
-        iconBg="border-brand-200 bg-brand-50"
+        icon={AutoAwesomeRoundedIcon}
+        iconBg="bg-brand-50"
+        iconColor="text-brand-600"
         value={data.aiShipmentMatch.value}
         title="AI Shipment Match"
         badge={data.aiShipmentMatch.badge}
