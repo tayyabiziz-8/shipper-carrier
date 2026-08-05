@@ -17,15 +17,13 @@ import ShipmentsTable from "../../components/dashboard/ShipmentsTable";
 import { mockUsers, emptyCarrierDashboard, activeCarrierDashboard } from "../../mock/dashboardData";
 
 export default function CarrierDashboard() {
-  // Dev-only toggle to preview both states from the mockups on one page.
-  // Swap for a real "has the carrier done anything yet" check from your API.
   const [hasActivity, setHasActivity] = useState(true);
   const data = hasActivity ? activeCarrierDashboard : emptyCarrierDashboard;
   const user = mockUsers.carrier;
 
   return (
     <DashboardLayout user={user}>
-      {/* DEV-ONLY STATE TOGGLE — remove once wired to real account data */}
+      {/* DEV-ONLY STATE TOGGLE */}
       <div className="mb-4 flex justify-end">
         <div className="inline-flex rounded-full bg-gray-100 p-1 text-xs font-medium">
           <button

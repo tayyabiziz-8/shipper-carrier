@@ -20,7 +20,7 @@ function MiniStatCard({ icon: Icon, iconBg, iconColor, value, title, delta, dire
           <Icon fontSize="small" />
         </span>
         {badge ? (
-          <span className="rounded-full bg-brand-50 px-2 py-0.5 text-[10px] font-semibold text-brand-700">
+          <span className="rounded-full bg-brand-50 px-2 py-0.5 text-[10px] font-semibold text-brand-600">
             {badge}
           </span>
         ) : (

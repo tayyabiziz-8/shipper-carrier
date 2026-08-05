@@ -38,7 +38,7 @@ export default function RegisterCarrier() {
     try {
       // TODO: await api.post("/auth/register/carrier", values)
       await new Promise((r) => setTimeout(r, 800));
-      toast.success("Account created — check your email to verify");
+      toast.success("Account created, check your email to verify");
       navigate("/verify-email");
     } catch (err) {
       toast.error(err?.message || "Couldn't create account");
