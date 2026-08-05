@@ -1,7 +1,7 @@
 export const mockLoads = Array.from({ length: 8 }).map((_, i) => ({
   id: "LD-4521",
   postedAgo: "1m ago",
-  cargo: "Flatbed - Steel Coils",
+  cargo: "Flatbed — Steel Coils",
   from: "Dallas, TX",
   to: "Chicago, IL",
   weight: "35,200 lbs",
@@ -12,6 +12,64 @@ export const mockLoads = Array.from({ length: 8 }).map((_, i) => ({
   pickupDate: "Mar 30, 2026",
   shipperRange: { min: 3200, max: 3800 },
 }));
+
+export const mockLoadDetail = {
+  id: "LD-4521",
+  summary: "Flatbed — Steel Coils  •  Full Truckload  •  920 mi",
+  route: {
+    from: "Dallas, TX",
+    to: "Chicago, IL",
+    via: "I-35 N → I-55 N → I-94 W",
+    totalDistance: "920 mi",
+    estDriveTime: "13 hrs 45 min",
+  },
+  loadType: "Full Truckload (FTL)",
+  commodity: "Raw Steel",
+  cargoDescription: "Steel Coils",
+  weight: "42,000 lbs",
+  dimensions: '48"W x 36"H x 60"L',
+  equipmentType: "Flatbed",
+  trailerLength: "53 ft",
+  specialReq: "Tarps, Coil Racks",
+  hazmat: false,
+  oversize: false,
+  schedule: {
+    pickupDate: "Mar 28, 2026",
+    pickupWindow: "6:00 AM - 12:00 PM",
+    deliveryDate: "Mar 30, 2026",
+    deliveryWindow: "8:00 AM - 5:00 PM",
+  },
+  pickupLocation: {
+    city: "Dallas, TX",
+    hours: "6 AM – 6 PM, Mon–Fri",
+    dockType: "Drive-through",
+    appointment: "Required",
+  },
+  deliveryLocation: {
+    city: "Chicago, IL",
+    hours: "8 AM – 5 PM, Mon–Fri",
+    dockType: "Standard",
+    appointment: "Required",
+  },
+  cargoImages: ["Steel Coils — Front", "Loading Diagram", "Packaging"],
+  shipper: {
+    name: "Midwest Steel Supply Co.",
+    memberSince: "Jan 2024",
+    loadsPosted: 64,
+    rating: 4.7,
+    verified: true,
+    avgPaymentDays: 3,
+  },
+  shipperRange: { min: 3200, max: 3800 },
+  ratePerMile: { min: 3.48, max: 4.13 },
+  marketAvgThisLane: 3450,
+  specialInstructions: [
+    "Coils must be secured with coil racks and edge protectors",
+    "Tarp required for weather protection during transit",
+    "Driver must check in at guard gate with valid CDL",
+    "No weekend deliveries accepted",
+  ],
+};
 
 export const carrierFleetOptions = {
   trucks: [

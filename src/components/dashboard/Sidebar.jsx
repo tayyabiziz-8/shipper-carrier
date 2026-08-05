@@ -23,7 +23,7 @@ const GENERAL_ITEMS = [
 ];
 
 const FLEET_ITEMS = [
-  { label: "Overview", to: "/carrier/fleet", Icon: DonutLargeRoundedIcon },
+  { label: "Overview", to: "/carrier/fleet", Icon: DonutLargeRoundedIcon, end: true },
   { label: "Trucks", to: "/carrier/fleet/trucks", Icon: LocalShippingRoundedIcon },
   { label: "Trailers", to: "/carrier/fleet/trailers", Icon: RvHookupRoundedIcon },
   { label: "Drivers", to: "/carrier/fleet/drivers", Icon: BadgeRoundedIcon },
@@ -35,14 +35,15 @@ const FOOTER_ITEMS = [
   { label: "Vetting Status", to: "/carrier/vetting", Icon: VerifiedRoundedIcon },
 ];
 
-function NavItem({ label, to, Icon }) {
+function NavItem({ label, to, Icon, end }) {
   return (
     <NavLink
       to={to}
+      end={end}
       className={({ isActive }) =>
         `flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
           isActive
-            ? "border-l-2 border-[#019E59] bg-white/10 pl-[10px] text-white"
+            ? "border-l-2 border-brand-500 bg-white/10 pl-[10px] text-white"
             : "text-gray-400 hover:bg-white/5 hover:text-gray-200"
         }`
       }
@@ -64,8 +65,8 @@ function SectionLabel({ children }) {
 export default function Sidebar() {
   return (
     <aside className="scrollbar-hide sticky top-0 hidden h-screen w-60 shrink-0 flex-col overflow-y-auto bg-[#0b0f19] px-3 pb-8 lg:flex">
-      <div className="px-6 pt-4">
-        <BrandMark light size={110} />
+      <div className="px-2 pb-6 pt-8">
+        <BrandMark light size={90} />
       </div>
 
       <SectionLabel>General</SectionLabel>

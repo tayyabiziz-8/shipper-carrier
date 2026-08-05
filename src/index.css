@@ -5,15 +5,16 @@
 html,
 body,
 #root {
+  overscroll-behavior: none;
   height: 100%;
 }
 
 body {
   font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
 }
 
-/* Visible keyboard focus everywhere */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -32,8 +33,6 @@ input:focus-visible,
   }
 }
 
-/* Keep sidebar scrollable (in case content ever overflows the viewport)
-   without showing a visible scrollbar. */
 .scrollbar-hide {
   scrollbar-width: none;
   -ms-overflow-style: none;

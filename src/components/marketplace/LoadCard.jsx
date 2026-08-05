@@ -1,11 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import BookmarkBorderRoundedIcon from "@mui/icons-material/BookmarkBorderRounded";
 import ArrowRightAltRoundedIcon from "@mui/icons-material/ArrowRightAltRounded";
 
 export default function LoadCard({ load, onSubmitOffer }) {
+  const navigate = useNavigate();
   return (
     <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-card">
       <div className="flex items-center justify-between">
-        <span className="font-semibold text-[#019E59]">{load.id}</span>
+        <span className="font-semibold text-brand-600">{load.id}</span>
         <div className="flex items-center gap-3 text-ink-400">
           <span className="text-xs">{load.postedAgo}</span>
           <button type="button" aria-label="Save load" className="hover:text-ink-600">
@@ -39,13 +41,17 @@ export default function LoadCard({ load, onSubmitOffer }) {
           <p className="text-xs text-ink-500">Pickup: {load.pickupDate}</p>
         </div>
         <div className="flex items-center gap-4">
-          <button type="button" className="text-sm font-semibold text-ink-500 hover:text-ink-900">
+          <button
+            type="button"
+            onClick={() => navigate(`/carrier/marketplace/${load.id}`)}
+            className="text-sm font-semibold text-ink-500 hover:text-ink-900"
+          >
             Details
           </button>
           <button
             type="button"
             onClick={() => onSubmitOffer(load)}
-            className="rounded-lg border border-[#019E59] px-4 py-2 text-sm font-semibold text-[#019E59] hover:bg-brand-50"
+            className="rounded-lg border border-brand-600 px-4 py-2 text-sm font-semibold text-brand-600 hover:bg-brand-50"
           >
             Submit Offer
           </button>

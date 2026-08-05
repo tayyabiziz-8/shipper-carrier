@@ -9,7 +9,7 @@ import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 
 export default function Topbar({ user }) {
   return (
-    <header className="flex h-[73px] shrink-0 items-center justify-between border-b border-gray-100 bg-white px-6">
+    <header className="sticky top-0 z-20 flex h-[73px] shrink-0 items-center justify-between border-b border-gray-200 bg-white px-6">
       <div className="flex items-center gap-4">
         <button type="button" aria-label="Toggle sidebar" className="text-ink-500 lg:hidden">
           <MenuRoundedIcon />

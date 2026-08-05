@@ -4,7 +4,7 @@ A full React auth flow matching the shippermeetcarrier.com design: login, regist
 (shipper + carrier), forgot/reset password (incl. expired-link state), email/phone
 verification, and 2FA.
 
-Update: Added the carrier dashboard, one page for now.
+Then carrier flow: Dashboard and Load Marketplace.
 
 ## Stack
 
@@ -26,7 +26,7 @@ Visit `http://localhost:5173/login`.
 
 ## Routes
 
-| Path                  | Screen                                  |
+| Path                   | Screen                                   |
 |------------------------|------------------------------------------|
 | `/login`               | Sign in (shipper/carrier toggle)         |
 | `/forgot-password`     | Request reset link                       |
@@ -38,6 +38,7 @@ Visit `http://localhost:5173/login`.
 | `/verify-phone`        | Phone verification code                  |
 | `/dashboard`           | Placeholder landing page after auth      |
 | `/carrier/dashboard`   | Carrier Dashboard                        |
+| `/carrier/marketplace` | Load Marketplace                         |
 
 ## Wiring up your API
 
@@ -48,6 +49,6 @@ field errors, so you mostly just need to plug in the request.
 
 ### Notes
 
-working on carrier-flow pages
+working on carrier-flow pages, 2 done.
 
 ---

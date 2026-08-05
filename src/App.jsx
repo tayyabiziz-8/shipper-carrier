@@ -11,6 +11,8 @@ import VerifyPhone from "./pages/VerifyPhone";
 import Dashboard from "./pages/Dashboard";
 import CarrierDashboard from "./pages/dashboard/CarrierDashboard";
 import LoadMarketplace from "./pages/dashboard/LoadMarketplace";
+import LoadDetail from "./pages/dashboard/LoadDetail";
+import ComingSoon from "./pages/dashboard/ComingSoon";
 
 export default function App() {
   return (
@@ -27,6 +29,17 @@ export default function App() {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/carrier/dashboard" element={<CarrierDashboard />} />
       <Route path="/carrier/marketplace" element={<LoadMarketplace />} />
+      <Route path="/carrier/marketplace/:loadId" element={<LoadDetail />} />
+      <Route path="/carrier/saved-loads" element={<ComingSoon title="Saved Loads" />} />
+      <Route path="/carrier/offers" element={<ComingSoon title="My Offers" />} />
+      <Route path="/carrier/shipments" element={<ComingSoon title="Shipments" />} />
+      <Route path="/carrier/fleet" element={<ComingSoon title="Fleet Overview" />} />
+      <Route path="/carrier/fleet/trucks" element={<ComingSoon title="Trucks" />} />
+      <Route path="/carrier/fleet/trailers" element={<ComingSoon title="Trailers" />} />
+      <Route path="/carrier/fleet/drivers" element={<ComingSoon title="Drivers" />} />
+      <Route path="/carrier/documents" element={<ComingSoon title="Documents" />} />
+      <Route path="/carrier/earnings" element={<ComingSoon title="Earnings" />} />
+      <Route path="/carrier/vetting" element={<ComingSoon title="Vetting Status" />} />
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );
