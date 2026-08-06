@@ -41,6 +41,7 @@ Visit `http://localhost:5173/login`.
 | `/carrier/marketplace` | Load Marketplace                         |
 | `/carrier/marketplace/:loadId` | Load Details                     |
 | `/carrier/saved-loads` | Saved Loads from Marketplace             |
+| `/carrier/earnings`    | Earnings page                            |
 
 ## Wiring up your API
 

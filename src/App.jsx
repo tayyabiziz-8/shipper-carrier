@@ -14,6 +14,7 @@ import LoadMarketplace from "./pages/dashboard/LoadMarketplace";
 import LoadDetail from "./pages/dashboard/LoadDetail";
 import SavedLoads from "./pages/dashboard/SavedLoads";
 import ComingSoon from "./pages/dashboard/ComingSoon";
+import Earnings from "./pages/dashboard/Earnings";
 
 export default function App() {
   return (
@@ -39,7 +40,7 @@ export default function App() {
       <Route path="/carrier/fleet/trailers" element={<ComingSoon title="Trailers" />} />
       <Route path="/carrier/fleet/drivers" element={<ComingSoon title="Drivers" />} />
       <Route path="/carrier/documents" element={<ComingSoon title="Documents" />} />
-      <Route path="/carrier/earnings" element={<ComingSoon title="Earnings" />} />
+      <Route path="/carrier/earnings" element={<Earnings />} />
       <Route path="/carrier/vetting" element={<ComingSoon title="Vetting Status" />} />
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
