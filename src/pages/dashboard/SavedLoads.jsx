@@ -22,7 +22,7 @@ export default function SavedLoads() {
     mockLoads.map((load) => ({ ...load, savedDate: load.pickupDate }))
   );
   const [viewMode, setViewMode] = useState("grid");
-  const [page, setPage] = useState(3); // matches the mockup's active page
+  const [page, setPage] = useState(3);
   const [selectedLoad, setSelectedLoad] = useState(null);
   const [loadToRemove, setLoadToRemove] = useState(null);
 
