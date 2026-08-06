@@ -1,7 +1,7 @@
 export const mockLoads = Array.from({ length: 8 }).map((_, i) => ({
   id: "LD-4521",
   postedAgo: "1m ago",
-  cargo: "Flatbed — Steel Coils",
+  cargo: "Flatbed - Steel Coils",
   from: "Dallas, TX",
   to: "Chicago, IL",
   weight: "35,200 lbs",
@@ -15,7 +15,7 @@ export const mockLoads = Array.from({ length: 8 }).map((_, i) => ({
 
 export const mockLoadDetail = {
   id: "LD-4521",
-  summary: "Flatbed — Steel Coils  •  Full Truckload  •  920 mi",
+  summary: "Flatbed - Steel Coils  •  Full Truckload  •  920 mi",
   route: {
     from: "Dallas, TX",
     to: "Chicago, IL",
@@ -51,7 +51,7 @@ export const mockLoadDetail = {
     dockType: "Standard",
     appointment: "Required",
   },
-  cargoImages: ["Steel Coils — Front", "Loading Diagram", "Packaging"],
+  cargoImages: ["Steel Coils - Front", "Loading Diagram", "Packaging"],
   shipper: {
     name: "Midwest Steel Supply Co.",
     memberSince: "Jan 2024",

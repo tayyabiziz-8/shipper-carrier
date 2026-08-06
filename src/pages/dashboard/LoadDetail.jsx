@@ -80,7 +80,6 @@ export default function LoadDetail() {
         </div>
       </div>
 
-      {/* Route map */}
       <img
         src={mapImg}
         alt={`Route from ${load.route.from} to ${load.route.to}`}
@@ -88,7 +87,6 @@ export default function LoadDetail() {
       />
 
       <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
-        {/* Left column */}
         <div className="flex flex-col gap-4 lg:col-span-2">
           <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-card">
             <h3 className="text-base font-bold text-ink-900">Load Information</h3>
@@ -175,7 +173,6 @@ export default function LoadDetail() {
           </div>
         </div>
 
-        {/* Right column */}
         <div className="flex flex-col gap-4">
           <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-card">
             <div className="flex items-center justify-between">
@@ -226,7 +223,7 @@ export default function LoadDetail() {
             <h3 className="text-base font-bold text-ink-900">Submit Offer</h3>
             <p className="mt-4 text-xs uppercase tracking-wide text-ink-400">Shipper Price Range</p>
             <div className="mt-1.5 rounded-lg bg-gray-50 py-3 text-center">
-              <span className="text-xl font-extrabold text-brand-600">
+              <span className="text-xl font-extrabold text-[#019E59]">
                 ${load.shipperRange.min.toLocaleString()}.00 – ${load.shipperRange.max.toLocaleString()}.00
               </span>
             </div>
@@ -247,7 +244,7 @@ export default function LoadDetail() {
             <button
               type="button"
               onClick={() => setOfferOpen(true)}
-              className="mt-5 w-full rounded-lg bg-brand-600 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+              className="mt-5 w-full rounded-lg bg-[#019E59] py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
             >
               Submit Offer
             </button>

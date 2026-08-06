@@ -12,6 +12,7 @@ import Dashboard from "./pages/Dashboard";
 import CarrierDashboard from "./pages/dashboard/CarrierDashboard";
 import LoadMarketplace from "./pages/dashboard/LoadMarketplace";
 import LoadDetail from "./pages/dashboard/LoadDetail";
+import SavedLoads from "./pages/dashboard/SavedLoads";
 import ComingSoon from "./pages/dashboard/ComingSoon";
 
 export default function App() {
@@ -30,7 +31,7 @@ export default function App() {
       <Route path="/carrier/dashboard" element={<CarrierDashboard />} />
       <Route path="/carrier/marketplace" element={<LoadMarketplace />} />
       <Route path="/carrier/marketplace/:loadId" element={<LoadDetail />} />
-      <Route path="/carrier/saved-loads" element={<ComingSoon title="Saved Loads" />} />
+      <Route path="/carrier/saved-loads" element={<SavedLoads />} />
       <Route path="/carrier/offers" element={<ComingSoon title="My Offers" />} />
       <Route path="/carrier/shipments" element={<ComingSoon title="Shipments" />} />
       <Route path="/carrier/fleet" element={<ComingSoon title="Fleet Overview" />} />

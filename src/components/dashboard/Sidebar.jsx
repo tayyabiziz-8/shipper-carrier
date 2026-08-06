@@ -65,8 +65,8 @@ function SectionLabel({ children }) {
 export default function Sidebar() {
   return (
     <aside className="scrollbar-hide sticky top-0 hidden h-screen w-60 shrink-0 flex-col overflow-y-auto bg-[#0b0f19] px-3 pb-8 lg:flex">
-      <div className="px-2 pb-6 pt-8">
-        <BrandMark light size={90} />
+      <div className="px-7 pt-4">
+        <BrandMark light size={110} />
       </div>
 
       <SectionLabel>General</SectionLabel>
@@ -83,7 +83,7 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      <div className="mt-5 flex flex-col gap-1 border-t border-white/10 pt-5">
+      <div className="mt-3 flex flex-col gap-1 border-t border-white/10 pt-5">
         {FOOTER_ITEMS.map((item) => (
           <NavItem key={item.label} {...item} />
         ))}

@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import BookmarkBorderRoundedIcon from "@mui/icons-material/BookmarkBorderRounded";
+import BookmarkRoundedIcon from "@mui/icons-material/BookmarkRounded";
+import DeleteOutlineRoundedIcon from "@mui/icons-material/DeleteOutlineRounded";
 import ArrowRightAltRoundedIcon from "@mui/icons-material/ArrowRightAltRounded";
 
-export default function LoadCard({ load, onSubmitOffer }) {
+export default function SavedLoadCard({ load, onSubmitOffer, onRemove }) {
   const navigate = useNavigate();
   return (
     <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-card">
@@ -10,8 +11,16 @@ export default function LoadCard({ load, onSubmitOffer }) {
         <span className="font-semibold text-[#019E59]">{load.id}</span>
         <div className="flex items-center gap-3 text-ink-400">
           <span className="text-xs">{load.postedAgo}</span>
-          <button type="button" aria-label="Save load" className="hover:text-ink-600">
-            <BookmarkBorderRoundedIcon fontSize="small" />
+          <button type="button" aria-label="Saved load" className="hover:text-ink-600">
+            <BookmarkRoundedIcon fontSize="small" />
+          </button>
+          <button
+            type="button"
+            aria-label="Remove saved load"
+            onClick={() => onRemove(load)}
+            className="text-red-400 hover:text-red-600"
+          >
+            <DeleteOutlineRoundedIcon fontSize="small" />
           </button>
         </div>
       </div>
@@ -38,7 +47,7 @@ export default function LoadCard({ load, onSubmitOffer }) {
       <div className="mt-4 flex items-end justify-between border-t border-gray-100 pt-4">
         <div>
           <p className="text-xl font-extrabold text-ink-900">{load.priceLabel}</p>
-          <p className="text-xs text-ink-500">Pickup: {load.pickupDate}</p>
+          <p className="text-xs text-ink-500">Saved: {load.savedDate}</p>
         </div>
         <div className="flex items-center gap-4">
           <button
@@ -51,7 +60,7 @@ export default function LoadCard({ load, onSubmitOffer }) {
           <button
             type="button"
             onClick={() => onSubmitOffer(load)}
-            className="rounded-lg border border-[#019E59] px-4 py-2 text-sm font-semibold text- hover:bg-[#019E59]brand-50"
+            className="rounded-lg border border-[#019E59] px-4 py-2 text-sm font-semibold text-[#019E59] hover:bg-brand-50"
           >
             Submit Offer
           </button>
