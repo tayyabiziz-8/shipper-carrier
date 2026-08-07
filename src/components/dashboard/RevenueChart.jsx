@@ -57,8 +57,7 @@ export default function RevenueChart({ points, highlightIndex, range = "Monthly"
       </div>
 
       <button
-        type="button"
-        aria-label="Next period"
+        type="button" aria-label="Next period"
         className="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white text-ink-500 shadow-card hover:text-ink-900"
       >
         <ChevronRightRoundedIcon fontSize="small" />
